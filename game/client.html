@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Meu Primeiro Jogo Multiplayer</title>
+
+        <style>
+            #screen {
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="screen" width="500" height="500">
+        </canvas>
+
+        <script>
+            const screen = document.getElementById('screen');
+            //pegando pelo id o elemento canvas no html
+            const context = screen.getContext('2d');
+            //pegando o contexto 2d do canvas
+
+            const game = {
+                players: {
+                    'player1': {x:1, y:1},
+                    'player2': {x:9, y:9}
+                },
+                fruits: {
+                    'fruit': {x:3, y:1}
+                }
+            }
+
+            //preparando as variaveis
+            const color = 'red';
+            const positionX = 0;
+            const positionY = 0;
+            const width = 250;
+            const height = 250;
+
+            //setando a cor
+            context.fillStyle = color;
+            context.fillRect(positionX, positionY, width, height)
+
+        </script>
+    </body>
+</html>
